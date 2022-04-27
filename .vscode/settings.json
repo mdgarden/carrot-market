@@ -1,5 +1,8 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "tailwindCSS.includeLanguages": { "typescriptreact": "html" }
+  "tailwindCSS.includeLanguages": { "typescriptreact": "html" },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
