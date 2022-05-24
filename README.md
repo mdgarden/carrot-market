@@ -8,6 +8,12 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+
+# prisma
+pscale connect carrot-market
+
+# prisma studio
+npx prisma studio
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

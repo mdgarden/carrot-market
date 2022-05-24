@@ -19,3 +19,12 @@ generator client {
   previewFeatures = ["referentialIntegrity"]
 }
 ```
+
+## Tips
+
+- int - str 사이 변환하기
+
+```js
++"123"; // 123
+123 + ""; // '123'
+```
