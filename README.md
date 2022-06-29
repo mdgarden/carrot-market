@@ -12,6 +12,12 @@ yarn dev
 # prisma
 pscale connect carrot-market
 
+# push to db
+npx prisma db push
+
+# planetscale schema
+app.planetscale.com/username/repository-name/branch-name/schema
+
 # prisma studio
 npx prisma studio
 ```
