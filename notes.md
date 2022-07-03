@@ -1,5 +1,24 @@
 # 강의 내용
 
+## 커맨드 모음
+
+```bash
+# run next.js
+npm run dev
+
+# prisma
+pscale connect carrot-market
+
+# push to db
+npx prisma db push
+
+# planetscale schema
+app.planetscale.com/username/repository-name/branch-name/schema
+
+# prisma studio
+npx prisma studio
+```
+
 ## Tailwind css
 
 - 모바일 먼저 디자인 후 화면 크기를 늘려가며 modifier지정
