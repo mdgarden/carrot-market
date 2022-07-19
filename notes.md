@@ -23,6 +23,8 @@ npx prisma studio
 
 - 모바일 먼저 디자인 후 화면 크기를 늘려가며 modifier지정
 
+### cls
+
 ## PlanetScale
 
 - pscale은 mysql의 플랫폼이 아니다.
