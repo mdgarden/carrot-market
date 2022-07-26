@@ -27,14 +27,13 @@ const Enter: NextPage = () => {
     if (loading) return;
     enter(validForm);
   };
-
   return (
     <div className="mt-16 px-4">
       <h3 className="text-center text-3xl font-bold">Enter to Carrot</h3>
       <div className="mt-12">
         <div className="flex flex-col items-center">
           <h5 className="text-sm font-medium text-gray-500">Enter using:</h5>
-          <div className="mt-8  grid  w-full grid-cols-2 border-b ">
+          <div className="mt-8 grid  w-full grid-cols-2 border-b ">
             <button
               className={cls(
                 "border-b-2 pb-4 text-sm font-medium",
@@ -65,7 +64,9 @@ const Enter: NextPage = () => {
         >
           {method === "email" ? (
             <Input
-              register={register("email", { required: true })}
+              register={register("email", {
+                required: true,
+              })}
               name="email"
               label="Email address"
               type="email"
@@ -74,7 +75,7 @@ const Enter: NextPage = () => {
           ) : null}
           {method === "phone" ? (
             <Input
-              register={register("email", { required: true })}
+              register={register("phone")}
               name="phone"
               label="Phone number"
               type="number"
@@ -86,7 +87,7 @@ const Enter: NextPage = () => {
             <Button text={loading ? "Loading" : "Get login link"} />
           ) : null}
           {method === "phone" ? (
-            <Button text={loading ? "Loaindg" : "Get one-time password"} />
+            <Button text={loading ? "Loading" : "Get one-time password"} />
           ) : null}
         </form>
 
