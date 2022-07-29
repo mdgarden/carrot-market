@@ -1,9 +1,16 @@
 import twilio from "twilio";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
 import { NextApiRequest, NextApiResponse } from "next";
 import withHandler, { ResponseType } from "@libs/server/withHandler";
 import client from "@libs/server/client";
 
 const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
+const mailgun = new Mailgun(FormData);
+const mg = mailgun.client({
+  username: "test user",
+  key: process.env.MAILGUN_API_KEY!,
+});
 
 async function handler(
   req: NextApiRequest,
@@ -34,6 +41,14 @@ async function handler(
       messagingServiceSid: process.env.TWILIO_SERVICE_SID,
       to: process.env.TWILIO_PHONE!,
       body: `Your login token is ${payload}.`,
+    });
+    console.log(message);
+  } else if (email) {
+    const message = await mg.messages.create(process.env.MAILGUN_DOMAIN!, {
+      from: process.env.MAILGUN_SENDER,
+      to: process.env.MAILGUN_RECEIVER,
+      subject: "Test subject",
+      text: "Hello here is a file in the attachment",
     });
     console.log(message);
   }
