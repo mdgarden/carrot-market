@@ -41,6 +41,22 @@ generator client {
 }
 ```
 
+## type과 interface의 차이
+
+## iron session과 JWT
+
+### iron session
+
+서명, 암호화된 쿠키를 사용하는 Node JS 무상태 세션도구
+유저가 유저 정보를 가진 객체를 만들면 payload를 암호화함, 암호화된 정보를 쿠키로 전송
+쿠키는 백엔드로 요청할 때마다 같이 보내짐
+쿠키의 복호화
+
+### JWT
+
+암호화되지 않고 서명이 되어있음
+유저의 id를 가진 객체에 서명하고 이 서명과 함께 유저에게 토큰을 보내는 것
+
 ## Tips
 
 - int - str 사이 변환하기
